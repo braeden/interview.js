@@ -29,6 +29,10 @@ class DisjointSets {
             this.arr[rootA] = rootB;
         }
     }
+
+    size(elem) {
+        return -this.arr[this.find(elem)]
+    }
 }
 
 //////////////////////////////////
@@ -36,4 +40,4 @@ class DisjointSets {
 const dset = new DisjointSets(10)
 dset.setUnion(0, 1)
 dset.setUnion(0, 2)
-console.log(dset.arr)
+console.log(dset.arr, dset.size(1))

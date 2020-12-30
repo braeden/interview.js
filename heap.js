@@ -53,13 +53,11 @@ class Heap {
             this.arr[idx] = temp;
             this.heapifyUp(parentIdx);
         }
-
     }
 
     heapifyDown(idx) {
         if (Heap.leftChild(idx) >= this.size())
             return;
-
         const childIdx = this.maxPriorityChild(idx);
         if (this.comparator(this.arr[childIdx], this.arr[idx]) < 0) {
             const temp = this.arr[childIdx];
@@ -67,9 +65,8 @@ class Heap {
             this.arr[idx] = temp;
             this.heapifyDown(childIdx);
         }
-
     }
-
+    
     static leftChild(idx) { return 2 * idx + 1; }
     static rightChild(idx) { return 2 * idx + 2; };
     static parent(idx) { return Math.floor((idx - 1) / 2); }
