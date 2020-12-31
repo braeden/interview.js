@@ -45,7 +45,6 @@ class Heap {
     heapifyUp(idx) {
         if (idx === 0)
             return;
-
         const parentIdx = Heap.parent(idx);
         if (this.comparator(this.arr[idx], this.arr[parentIdx]) < 0) {
             const temp = this.arr[parentIdx];
@@ -66,7 +65,7 @@ class Heap {
             this.heapifyDown(childIdx);
         }
     }
-    
+
     static leftChild(idx) { return 2 * idx + 1; }
     static rightChild(idx) { return 2 * idx + 2; };
     static parent(idx) { return Math.floor((idx - 1) / 2); }
@@ -81,5 +80,5 @@ for (let i = 10; i > -10; i--) {
 }
 
 while (h.size()) {
-    console.log(h.pop())
+    console.log(h.pop());
 }

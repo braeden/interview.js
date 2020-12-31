@@ -8,7 +8,7 @@
 - Takes a optional custom comparator (like `sort()`)
     - `Min-heap: (a, b) => a-b`
     - `Max-heap: (a, b) => b-a`
-- Takes a optional input array that's heapified
+- Takes an optional input array that's heapified
 - Internally implemented using an array with root @ idx = 0
 - No guarantees about comparator stability (per ES spec)
 

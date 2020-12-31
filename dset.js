@@ -2,8 +2,8 @@ class DisjointSets {
     constructor(size = 0) {
         this.arr = [];
         this.addElems(size);
-
     }
+
     addElems(size) {
         this.arr = this.arr.concat(new Array(size).fill(-1));
     }
@@ -18,7 +18,7 @@ class DisjointSets {
         const rootA = this.find(a);
         const rootB = this.find(b);
 
-        if (a === b)
+        if (rootA === rootB)
             return;
 
         if (this.arr[rootA] <= this.arr[rootB]) {
@@ -31,13 +31,13 @@ class DisjointSets {
     }
 
     size(elem) {
-        return -this.arr[this.find(elem)]
+        return -this.arr[this.find(elem)];
     }
 }
 
 //////////////////////////////////
 
-const dset = new DisjointSets(10)
-dset.setUnion(0, 1)
-dset.setUnion(0, 2)
-console.log(dset.arr, dset.size(1))
+const dset = new DisjointSets(10);
+dset.setUnion(0, 1);
+dset.setUnion(0, 2);
+console.log(dset.arr, dset.size(1));
