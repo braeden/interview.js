@@ -17,6 +17,10 @@
 - Array implementation (ints only) 
 - Values: negative = root = -size of union, positive = points to parent
 
+# Trie
+- Super basic nested object, keys are letters, `.end` marks the end of a word
+- Simple to check the full and prefix existance of a word
+
 # Todos
 - Write in TS and compile to JS
 - Write some actual unit tests in Mocha/Chai/assert
